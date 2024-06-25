@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section class="w-75 mx-auto py-4">
+        <h1 class="fw-bolder py-3 text-center">Product Mangement System</h1>
+
+        <label for="prductNameInput"> Product Name :</label>
+        <input type="text" oninput="ValidateProductName();" class="form-control mb-3" id="prductNameInput">
+
+        <label for="prductPriceInput"> Product Price :</label>
+        <input type="number" class="form-control mb-3" id="prductPriceInput">
+
+        <label for="prductCategoryInput"> Product Category :</label>
+        <input type="text" class="form-control mb-3" id="prductCategoryInput">
+
+        <label for="prductDescriptionInput"> Product Description :</label>
+        <textarea class="form-control mb-3" id="prductDescriptionInput"></textarea>
+
+        <button id="Addbtn"  onclick=" Add_Product(); " class="btn btn-outline-primary ">Add Product</button>
+        <button id="Updatebtn" onclick=" UpdateIndex();" class="btn d-none btn-outline-primary ">Update</button>
+
+    </section>
+
+<section class="w-75 mx-auto p-3">
+    <label  for="search">Search</label>
+        <input oninput="Search(this.value)" class="form-control" placeholder="Search By Name" type="text" id="search">
+</section>
+
+<table class="table w-75 mx-auto my-4">
+    <thead>
+        <th>index</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Category</th>
+        <th>Product Description</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    <tbody id="Table-content">
+    </tbody>
+</table>
+
+
+    <script src="main.js"></script> <!--Best Place-->
+</body>
+
+</html>
